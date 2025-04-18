@@ -14,11 +14,11 @@ export default function Hero() {
     setStatus('loading')
 
     try {
-      const { error } = await supabase
+      const { error: supabaseError } = await supabase
         .from('waitlist')
         .insert([{ email }])
 
-      if (error) throw error
+      if (supabaseError) throw supabaseError
 
       setStatus('success')
       setMessage('Thanks for joining! We\'ll keep you updated.')
@@ -56,7 +56,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-900">
-            The first platform to deliver a seamless end-to-end experience that guides students through the complete TOK learning journey.
+            tokmaster.com delivers a seamless end-to-end experience that guides students through the complete TOK learning journey.
           </p>
           <form onSubmit={handleSubmit} className="mt-8 flex max-w-md gap-x-4">
             <motion.div

@@ -46,7 +46,7 @@ export default function Pricing() {
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-900">
-          Start for free, upgrade when you're ready. Cancel anytime.
+          Start for free, upgrade when you&apos;re ready. Cancel anytime.
         </p>
         <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-x-8 xl:gap-x-12">
           {tiers.map((tier, index) => (

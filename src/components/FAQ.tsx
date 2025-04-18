@@ -10,20 +10,20 @@ const faqs = [
     answer: "Theory of Knowledge (TOK) is a core component of the International Baccalaureate (IB) Diploma Programme. It challenges students to reflect on the nature of knowledge, and on how we know what we claim to know."
   },
   {
-    question: "How does TokMaster help with the TOK Exhibition?",
-    answer: "TokMaster provides a comprehensive Exhibition preparation toolkit, including artifact brainstorming tools, exemplar galleries with rubric overlays, and AI-assisted prompts to help you connect your artifacts to TOK concepts."
+    question: "How does tokmaster.com help with the TOK Exhibition?",
+    answer: "tokmaster.com provides a comprehensive Exhibition preparation toolkit, including artifact brainstorming tools, exemplar galleries with rubric overlays, and AI-assisted prompts to help you connect your artifacts to TOK concepts."
   },
   {
     question: "Can I use the AI writing assistant for my TOK Essay?",
     answer: "Yes! Our AI writing assistant helps with idea generation, essay structuring, and provides instant feedback. However, it's designed to enhance your thinking process, not write the essay for you, ensuring academic integrity."
   },
   {
-    question: "How do I get started with TokMaster?",
+    question: "How do I get started with tokmaster.com?",
     answer: "You can start with our free tier, which gives you access to the first Theme and AOK. When you're ready for full access, upgrade to Pro for complete access to all features, including AI assistance and human coaching."
   },
   {
-    question: "Is TokMaster aligned with the new TOK curriculum?",
-    answer: "Absolutely! TokMaster is fully aligned with the current TOK curriculum (first assessment 2022). We regularly update our content and features to reflect any changes in the IB requirements."
+    question: "Is tokmaster.com aligned with the new TOK curriculum?",
+    answer: "Absolutely! tokmaster.com is fully aligned with the current TOK curriculum (first assessment 2022). We regularly update our content and features to reflect any changes in the IB requirements."
   }
 ]
 

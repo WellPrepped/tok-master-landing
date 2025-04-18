@@ -29,7 +29,7 @@ export default function CTA() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mx-auto mt-6 max-w-xl text-lg leading-8 text-white"
           >
-            Join thousands of IB students who are mastering Theory of Knowledge with TokMaster.
+            Join thousands of IB students who are mastering Theory of Knowledge with tokmaster.com
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

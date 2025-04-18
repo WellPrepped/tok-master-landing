@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TokMaster - Your Complete IB Theory of Knowledge Solution",
+  title: "tokmaster.com - Your Complete IB Theory of Knowledge Solution",
   description: "Master IB Theory of Knowledge with our comprehensive platform featuring AI-assisted learning, expert guidance, and a complete suite of TOK resources.",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
             <div className="flex lg:flex-1">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  TokMaster
+                  tokmaster.com
                 </span>
               </a>
             </div>
