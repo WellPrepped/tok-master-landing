@@ -1,0 +1,86 @@
+
+-- Create waitlist table with UUID and RLS
+create table waitlist (
+  id         uuid      default gen_random_uuid() primary key,
+  email      text      unique not null,
+  joined_at  timestamptz default now()
+);
+
+-- Enable Row Level Security (RLS)
+alter table waitlist enable row level security;
+
+-- Create policy to allow public inserts
+create policy "Public insert" on waitlist
+  for insert with check ( true );
+
+  i want a landing page for tokmaster.com
+
+  ---
+
+### 1. Summary
+
+tokmaster.com addresses a critical gap in the IB Theory of Knowledge (TOK) education market. While the TOK course was redesigned for first assessment in 2022, it remains the most challenging and opaque component of the IB Diploma Programme for many students. 
+
+Existing competitors (IB Mastery, Revision Dojo) offer static content but lack an integrated workflow solution.
+
+tokmaster.com will be the first platform to deliver a seamless end-to-end experience that guides students through the complete TOK learning journey:
+
+- Concept acquisition
+- Exemplar study
+- AI-assisted drafting
+- Human coaching
+
+This comprehensive approach will be delivered as a SaaS learning environment combined with a tutor marketplace, creating a unique value proposition in the education technology space for IB students.
+
+### 2. User personas
+
+**Grade‑11 IB student** – new to TOK, anxious about the Exhibition; wants digestible lessons and quick feedback.
+
+**Grade‑12 IB student** – racing the essay deadline; wants instant idea generation and structure validation.
+
+**Private tutor** – monetises expertise; seeks a storefront and scheduling/payment backend.
+
+### 2.1. Secondary users
+
+- **TOK Teachers**
+    - Context: School-based educators seeking supplemental resources
+    - Needs: Classroom materials, student progress tracking
+- **Parents of IB Students**
+    - Context: Supporting their children's educational journey
+    - Needs: Understanding TOK requirements, tracking progress
+
+### 3. Product scope & key features
+
+| Tab (Nav) | Core user job | Feature set | Priority |
+| --- | --- | --- | --- |
+| **Modules / Learn** | Master syllabus concepts | ‑ Video + slide micro‑lessons (Themes → AOKs)  ‑ Interactive flashcards (spaced repetition)  ‑ Real‑life‑situation (RLS) library tagged by Theme/AOK | P0 |
+| **Hub — Essays & Exhibitions** | Study exemplars & rubric | ‑ Searchable gallery (filters, rubric overlay)  ‑ Artifact brainstorm worksheet (Exhibition)  ‑ Essay title unpacker & planner | P0 |
+| **Write (AI bot)** | Produce own work | Sub‑tabs: 1) *Generate Ideas*→ artifact/KQ suggestions; 2) *Generate Structure*→ outline + word‑budget; 3) *Generate Essay*→ full draft in rich‑text editor with in‑line AI critique; 4) Reference generator (Chicago) | P0 |
+| **Community** | Peer support | ‑ Discord‑style forum  ‑ Weekly challenges & streak badges | P1 |
+| **Consultations** | WellPrepped normal offering | ‑ Calendly/Cal.com slots  ‑ Stripe checkout  ‑ Zoom link auto‑gen | P0 |
+|  |  |  |  |
+
+- **Freemium** – Learn tab (first Theme + first AOK) & Community read‑only.
+- **Pro $20/mo, or $120 for lifetime access** – Full Modules, Hub exemplars, AI bot limited (5 generations/wk).
+
+### 4. To-do
+
+**4.1. Engineering**
+
+**4.2. Notes**
+
+Optional themes
+
+- Knowledge and technology
+- Knowledge and language
+- Knowledge and politics
+- Knowledge and religion
+- Knowledge and indigenous societies
+
+AOKs
+
+- History
+- The human sciences
+- The natural sciences
+- The arts
+- Mathematics
