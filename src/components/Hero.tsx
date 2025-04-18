@@ -23,7 +23,7 @@ export default function Hero() {
       setStatus('success')
       setMessage('Thanks for joining! We\'ll keep you updated.')
       setEmail('')
-    } catch (_error) {
+    } catch {
       setStatus('error')
       setMessage('Something went wrong. Please try again.')
     }
