@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { supabase } from '@/lib/supabase'
+import { supabase, isSupabaseConfigured } from '@/lib/supabase'
 
 export default function Hero() {
   const [email, setEmail] = useState('')
@@ -11,6 +11,13 @@ export default function Hero() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    if (!isSupabaseConfigured) {
+      setStatus('error')
+      setMessage('System is currently under maintenance. Please try again later.')
+      return
+    }
+
     setStatus('loading')
 
     try {

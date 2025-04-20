@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -7,6 +8,24 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "tokmaster.com - Your Complete IB Theory of Knowledge Solution",
   description: "Master IB Theory of Knowledge with our comprehensive platform featuring AI-assisted learning, expert guidance, and a complete suite of TOK resources.",
+  metadataBase: new URL('https://tokmaster.com'),
+  openGraph: {
+    title: 'tokmaster.com - Your Complete IB Theory of Knowledge Solution',
+    description: 'Master IB Theory of Knowledge with our comprehensive platform featuring AI-assisted learning, expert guidance, and a complete suite of TOK resources.',
+    url: 'https://tokmaster.com',
+    siteName: 'tokmaster.com',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'tokmaster.com - Your Complete IB Theory of Knowledge Solution',
+    description: 'Master IB Theory of Knowledge with our comprehensive platform featuring AI-assisted learning, expert guidance, and a complete suite of TOK resources.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -23,9 +42,9 @@ export default function RootLayout({
         <header className="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-sm">
           <nav className="mx-auto max-w-7xl flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
-              <a href="/" className="-m-1.5 p-1.5 text-lg font-semibold leading-6 text-gray-900">
+              <Link href="/" className="-m-1.5 p-1.5 text-lg font-semibold leading-6 text-gray-900">
                 tokmaster.com
-              </a>
+              </Link>
             </div>
             <div className="flex lg:hidden">
               <button
@@ -36,12 +55,12 @@ export default function RootLayout({
               </button>
             </div>
             <div className="hidden lg:flex lg:gap-x-12">
-              <a href="#features" className="text-sm font-semibold leading-6 text-gray-900">
+              <Link href="#features" className="text-sm font-semibold leading-6 text-gray-900">
                 Features
-              </a>
-              <a href="#pricing" className="text-sm font-semibold leading-6 text-gray-900">
+              </Link>
+              <Link href="#pricing" className="text-sm font-semibold leading-6 text-gray-900">
                 Pricing
-              </a>
+              </Link>
             </div>
           </nav>
         </header>
