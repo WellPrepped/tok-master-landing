@@ -16,33 +16,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
+      <body 
+        className={`${inter.className} antialiased`}
+        suppressHydrationWarning={true}
+      >
         <header className="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-sm">
           <nav className="mx-auto max-w-7xl flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  tokmaster.com
-                </span>
+              <a href="/" className="-m-1.5 p-1.5 text-lg font-semibold leading-6 text-gray-900">
+                tokmaster.com
               </a>
             </div>
-            <div className="hidden md:flex gap-x-12">
-              <a href="#features" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors">
+            <div className="flex lg:hidden">
+              <button
+                type="button"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              >
+                <span className="sr-only">Open main menu</span>
+              </button>
+            </div>
+            <div className="hidden lg:flex lg:gap-x-12">
+              <a href="#features" className="text-sm font-semibold leading-6 text-gray-900">
                 Features
               </a>
-              <a href="#pricing" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors">
+              <a href="#pricing" className="text-sm font-semibold leading-6 text-gray-900">
                 Pricing
-              </a>
-              <a href="#faq" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors">
-                FAQ
-              </a>
-            </div>
-            <div className="flex flex-1 justify-end">
-              <a 
-                href="#" 
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors"
-              >
-                Log in <span aria-hidden="true">→</span>
               </a>
             </div>
           </nav>
